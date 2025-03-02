@@ -39,25 +39,26 @@
         <p class="mt-3">Don't have an account? <a href="signup.html">Sign up</a></p>
     </div>
 
-  <script>
-    function loginUser(event) {
-        event.preventDefault(); // Prevent form submission
+ <script>
+        function loginUser(event) {
+            event.preventDefault(); // Prevent form submission
 
-        let username = document.getElementById("loginUsername").value;
-        let password = document.getElementById("loginPassword").value;
+            let username = document.getElementById("loginUsername").value;
+            let password = document.getElementById("loginPassword").value;
 
-        // Get stored credentials from local storage (for demo purposes)
-        let storedUsername = localStorage.getItem("username");
-        let storedPassword = localStorage.getItem("password");
+            // Get stored credentials from local storage (for demo purposes)
+            let storedUsername = localStorage.getItem("username");
+            let storedPassword = localStorage.getItem("password");
 
-        if (username === storedUsername && password === storedPassword) {
-            alert("Login successful! Redirecting to Login Page...");
-            window.location.href = "login.html"; // Redirect to login.html in the same directory
-        } else {
-            alert("Invalid Username or Password");
+            if (username === storedUsername && password === storedPassword) {
+                alert("Login successful! Redirecting...");
+                window.location.href = "http://sssociety.sentientsystems.net/"; // Redirect to website
+            } else {
+                alert("Invalid Username or Password");
+            }
         }
-    }
-</script>
+    </script>
+
 
 
 </body>
